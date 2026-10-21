@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cpobhgtjtyanx"]
+
+[node name="Transition" type="Node" unique_id=1506702306]
+
+[node name="CanvasLayer20" type="CanvasLayer" parent="." unique_id=1850840057]
+layer = 20
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer20" unique_id=1113836930]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1768423652]
