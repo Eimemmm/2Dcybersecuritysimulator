@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://mp6qetv4piuy"]
+
+[ext_resource type="Texture2D" uid="uid://bl5itkmss2082" path="res://Image/ภาพถ่ายหน้าจอ 2569-10-22 เวลา 22.10.17.png" id="1_n8be1"]
+[ext_resource type="FontFile" uid="uid://cbaq7ehjrmll1" path="res://Font/PressStart2P.ttf" id="2_tp648"]
+
+[node name="scene 1" type="Control" unique_id=1236426171]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=937045190]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 35.0
+offset_right = 644.0
+offset_bottom = 395.0
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=1282549730]
+layout_mode = 1
+offset_left = -21.0
+offset_top = 15.0
+offset_right = 658.0
+offset_bottom = 208.0
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/HBoxContainer" unique_id=1231975895]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_n8be1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect/HBoxContainer" unique_id=367429961]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="ColorRect/HBoxContainer" unique_id=974623771]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=1548893422]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 237.0
+offset_right = 654.0
+offset_bottom = 334.0
+theme_override_fonts/normal_font = ExtResource("2_tp648")
+theme_override_font_sizes/normal_font_size = 13
+text = "คุณเรียนจบมหาวิทยาลัยแล้ว และพึ่งจบการฝึกงาน...
+ตอนนี้คุณกำลังหางานบนเว็บสมัครงาน และครุ่นคิดอยู่นานว่าจะสมัครบริษัทไหน ตำแหน่งอะไร
+งานสายไซเบอร์มีหลายตำแหน่ง ทั้ง SOC Analyst, Pentester, Cyber Engineer และอื่น ๆ อีกมากมาย แต่สุดท้ายเขาก็เลือกสมัคร SOC Analyst ที่ Pok Pok Co."
