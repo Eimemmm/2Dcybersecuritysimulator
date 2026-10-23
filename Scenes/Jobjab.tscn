@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bcl6oo51wv0v8"]
+
+[ext_resource type="Texture2D" uid="uid://dd1ee8fnvqdn6" path="res://Image/Pre_Test/2DCybersecuritySimulation (4).png" id="1_ujeps"]
+[ext_resource type="FontFile" uid="uid://bwh3nd3iuccg3" path="res://Font/TA 8 bit.ttf" id="2_h41ri"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+content_margin_left = 5.0
+content_margin_top = 2.0
+content_margin_right = 5.0
+content_margin_bottom = 2.0
+bg_color = Color(1, 0, 0.5019608, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1neno"]
+bg_color = Color(1, 0.6688087, 0.7555607, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Jobjab" type="Control" unique_id=1573779066]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2041934708]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ujeps")
+expand_mode = 1
+
+[node name="Start_Test" type="Button" parent="TextureRect" unique_id=197773081]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -309.0
+offset_top = -69.0
+offset_right = -26.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_h41ri")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1neno")
+text = "เริ่มทำแบบทดสอบ Pre-Test"
+text_direction = 1

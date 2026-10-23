@@ -104,4 +104,4 @@ func _input(event):
 		set_process_input(false)
 		
 		# เปลี่ยนหน้าไปแบบมีเฟดมืด
-		Transition.change_scene("res://Scenes/pre_test.tscn")
+		Transition.change_scene("res://Scenes/Jobjab.tscn")

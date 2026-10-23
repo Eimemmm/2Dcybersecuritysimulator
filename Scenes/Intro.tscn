@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://mp6qetv4piuy"]
 
 [ext_resource type="Texture2D" uid="uid://brchyo0rncu3k" path="res://Image/Intro/2DCybersecuritySimulation.png" id="1_rrrc0"]
-[ext_resource type="Script" uid="uid://d0v0sbn24kqdr" path="res://Scenes/intro.gd" id="1_u3s32"]
+[ext_resource type="Script" uid="uid://d0v0sbn24kqdr" path="res://Script/intro.gd" id="1_u3s32"]
 [ext_resource type="Texture2D" uid="uid://dpa3ksbkl2em4" path="res://Image/Intro/2DCybersecuritySimulation (1).png" id="2_d0kpp"]
 [ext_resource type="Texture2D" uid="uid://boomiadpuhlya" path="res://Image/Intro/2DCybersecuritySimulation (2).png" id="3_u3s32"]
 [ext_resource type="AudioStream" uid="uid://8ygg4rn1s4y" path="res://Audio/Typing.mp3" id="5_u3s32"]

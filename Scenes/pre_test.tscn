@@ -1,60 +1,205 @@
-[gd_scene format=3 uid="uid://bcl6oo51wv0v8"]
+[gd_scene format=3 uid="uid://cmfvp4fsulwng"]
 
-[ext_resource type="Texture2D" uid="uid://dd1ee8fnvqdn6" path="res://Image/Pre_Test/2DCybersecuritySimulation (4).png" id="1_q26ad"]
-[ext_resource type="FontFile" uid="uid://bwh3nd3iuccg3" path="res://Font/TA 8 bit.ttf" id="2_7wm38"]
+[ext_resource type="Script" uid="uid://dj8q3y8i0wo63" path="res://Scenes/pre_test.gd" id="1_qg524"]
+[ext_resource type="Texture2D" uid="uid://dxb2exeettvr8" path="res://Image/Pre_Test/PreTestlayout.png" id="2_0af0e"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+[sub_resource type="SystemFont" id="SystemFont_s1fef"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qg524"]
 content_margin_left = 5.0
-content_margin_top = 2.0
+content_margin_top = 5.0
 content_margin_right = 5.0
-content_margin_bottom = 2.0
+content_margin_bottom = 5.0
 bg_color = Color(1, 0, 0.5019608, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.53531086, 0.01213973, 0.88947886, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1neno"]
-bg_color = Color(1, 0.6688087, 0.7555607, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0af0e"]
+bg_color = Color(2.0696223e-06, 0.72367585, 0.2532551, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.035935163, 0.5581201, 5.7756904e-07, 1)
 
-[node name="Pre-Test" type="Control" unique_id=1573779066]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sde50"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_r434p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0h76"]
+bg_color = Color(0.38847992, 0.62974435, 0.99022466, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85vi7"]
+bg_color = Color(0.59112996, 0.7541309, 0.9962819, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Pre_Test" type="Control" unique_id=852436706]
+custom_minimum_size = Vector2(640, 360)
 layout_mode = 3
-anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qg524")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2041934708]
+[node name="Background" type="TextureRect" parent="." unique_id=60527227]
+custom_minimum_size = Vector2(640, 360)
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_q26ad")
+texture = ExtResource("2_0af0e")
 expand_mode = 1
 
-[node name="Start_Test" type="Button" parent="TextureRect" unique_id=197773081]
+[node name="Header" type="Label" parent="." unique_id=1228950595]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -173.5
+offset_top = 26.0
+offset_right = 173.5
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 24
+text = "Application Assessment (1/12)"
+
+[node name="Question" type="RichTextLabel" parent="." unique_id=1944997821]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 7.0
+offset_top = 69.0
+offset_right = 627.0
+offset_bottom = 161.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = SubResource("SystemFont_s1fef")
+theme_override_font_sizes/normal_font_size = 22
+
+[node name="ExhibitPanel" type="PanelContainer" parent="." unique_id=1462554521]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48200002
+anchor_top = 0.358
+anchor_right = 0.48200002
+anchor_bottom = 0.358
+offset_left = -278.48
+offset_top = -27.880005
+offset_right = 278.52
+offset_bottom = 29.119995
+grow_horizontal = 2
+
+[node name="ExhibitLabel" type="RichTextLabel" parent="ExhibitPanel" unique_id=1377721850]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Choices" type="GridContainer" parent="." unique_id=1338397213]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -309.0
-offset_top = -69.0
-offset_right = -26.0
-offset_bottom = -28.0
+offset_left = -321.0
+offset_top = -192.0
+offset_right = 320.0
+offset_bottom = -22.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_7wm38")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_g4v7s")
-theme_override_styles/hover = SubResource("StyleBoxFlat_1neno")
-text = "เริ่มทำแบบทดสอบ Pre-Test"
-text_direction = 1
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="ChoiceA" type="Button" parent="Choices" unique_id=2102942316]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_qg524")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0af0e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sde50")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_r434p")
+autowrap_mode = 3
+
+[node name="ChoiceB" type="Button" parent="Choices" unique_id=301397733]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_qg524")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0af0e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sde50")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_r434p")
+autowrap_mode = 3
+
+[node name="ChoiceC" type="Button" parent="Choices" unique_id=1127359248]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_qg524")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0af0e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sde50")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_r434p")
+autowrap_mode = 3
+
+[node name="ChoiceD" type="Button" parent="Choices" unique_id=944780141]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_qg524")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0af0e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sde50")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_r434p")
+autowrap_mode = 3
+
+[node name="NextButton" type="Button" parent="." unique_id=2101093111]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 584.0
+offset_top = 307.0
+offset_right = 633.0
+offset_bottom = 334.0
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_n0h76")
+theme_override_styles/hover = SubResource("StyleBoxFlat_85vi7")

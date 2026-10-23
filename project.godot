@@ -29,8 +29,8 @@ Transition="*uid://cpobhgtjtyanx"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
-window/size/window_width_override=1280
-window/size/window_height_override=720
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
 
@@ -38,6 +38,7 @@ window/stretch/scale_mode="integer"
 
 folder_colors={
 "res://Audio/": "green",
+"res://Data/": "orange",
 "res://Font/": "red",
 "res://Image/": "purple",
 "res://Scenes/": "yellow",

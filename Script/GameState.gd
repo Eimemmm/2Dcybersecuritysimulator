@@ -1,5 +1,5 @@
 extends Node
 
 var player_name := ""
-var role := ""          # "hacker" หรือ "defender"
-var pretest_score := 0
+var pretest_scores := {}    # เช่น {"D1": 2, "D2": 1, ...}
+var posttest_scores := {}
