@@ -3,9 +3,47 @@
 [ext_resource type="Texture2D" uid="uid://brchyo0rncu3k" path="res://Image/Intro/2DCybersecuritySimulation.png" id="1_rrrc0"]
 [ext_resource type="Script" uid="uid://d0v0sbn24kqdr" path="res://Scenes/intro.gd" id="1_u3s32"]
 [ext_resource type="Texture2D" uid="uid://dpa3ksbkl2em4" path="res://Image/Intro/2DCybersecuritySimulation (1).png" id="2_d0kpp"]
-[ext_resource type="FontFile" uid="uid://dd0ykhn4ey5pg" path="res://Font/pixellet.ttf" id="2_vmpge"]
 [ext_resource type="Texture2D" uid="uid://boomiadpuhlya" path="res://Image/Intro/2DCybersecuritySimulation (2).png" id="3_u3s32"]
 [ext_resource type="AudioStream" uid="uid://8ygg4rn1s4y" path="res://Audio/Typing.mp3" id="5_u3s32"]
+[ext_resource type="FontFile" uid="uid://bwh3nd3iuccg3" path="res://Font/TA 8 bit.ttf" id="6_ina6a"]
+[ext_resource type="FontFile" uid="uid://cbaq7ehjrmll1" path="res://Font/PressStart2P.ttf" id="7_tay7t"]
+
+[sub_resource type="Animation" id="Animation_jw2oo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5dcil"]
+resource_name = "blink"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iffca"]
+_data = {
+&"RESET": SubResource("Animation_jw2oo"),
+&"blink": SubResource("Animation_5dcil")
+}
 
 [node name="Intro" type="Control" unique_id=1236426171]
 layout_mode = 3
@@ -15,11 +53,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u3s32")
-next_scene_path = null
-chars_per_second = null
-image_fade_time = null
-pause_after_line = null
-sound_min_interval = null
 
 [node name="Typesound" type="AudioStreamPlayer2D" parent="." unique_id=243793973]
 stream = ExtResource("5_u3s32")
@@ -57,6 +90,8 @@ texture = ExtResource("1_rrrc0")
 expand_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="ColorRect/HBoxContainer/ImageHolder" unique_id=367429961]
+light_mask = 2
+visibility_layer = 2
 layout_mode = 0
 offset_left = 214.0
 offset_top = -2.0
@@ -66,9 +101,11 @@ texture = ExtResource("2_d0kpp")
 expand_mode = 1
 
 [node name="TextureRect3" type="TextureRect" parent="ColorRect/HBoxContainer/ImageHolder" unique_id=974623771]
+light_mask = 2
+visibility_layer = 2
 custom_minimum_size = Vector2(200, 180)
 layout_mode = 0
-offset_left = 410.0
+offset_left = 412.0
 offset_right = 633.0
 offset_bottom = 200.0
 texture = ExtResource("3_u3s32")
@@ -80,10 +117,25 @@ offset_left = 7.0
 offset_top = 237.0
 offset_right = 647.0
 offset_bottom = 354.0
-theme_override_fonts/normal_font = ExtResource("2_vmpge")
-theme_override_font_sizes/normal_font_size = 13
+theme_override_fonts/normal_font = ExtResource("6_ina6a")
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "คุณเรียนจบมหาวิทยาลัยแล้ว และพึ่งจบการฝึกงาน...
 ตอนนี้คุณกำลังหางานบนเว็บสมัครงาน และครุ่นคิดอยู่นานว่าจะสมัครบริษัทไหน ตำแหน่งอะไร
-งานสายไซเบอร์มีหลายตำแหน่ง ทั้ง SOC Analyst, Pentester, Cyber Engineer และอื่น ๆ อีกมากมาย 
+งานสายไซเบอร์มีหลากหลายตำแหน่ง ทั้ง SOC Analyst, Pentester, Cyber Engineer และอื่น ๆ อีกมากมาย 
 แต่สุดท้ายคุณก็เลือกสมัคร SOC Analyst ที่ Pok Pok Co."
+
+[node name="ContinueLabel" type="RichTextLabel" parent="ColorRect/RichTextLabel" unique_id=604323484]
+visible = false
+layout_mode = 0
+offset_left = 416.0
+offset_top = 106.0
+offset_right = 619.0
+offset_bottom = 129.0
+theme_override_fonts/normal_font = ExtResource("7_tay7t")
+theme_override_font_sizes/normal_font_size = 10
+text = "space to continue..."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1819578315]
+root_node = NodePath("../ColorRect/RichTextLabel/ContinueLabel")
+libraries/ = SubResource("AnimationLibrary_iffca")

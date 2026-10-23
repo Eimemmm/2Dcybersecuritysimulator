@@ -59,4 +59,4 @@ func _on_name_submitted(text: String) -> void:
 	if player_name.is_empty():
 		return                                   # หรือแสดงข้อความเตือน
 	GameState.player_name = player_name
-	get_tree().change_scene_to_file("res://scenes/Intro.tscn")
+	Transition.change_scene("res://Scenes/Intro.tscn")

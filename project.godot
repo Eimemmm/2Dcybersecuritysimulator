@@ -23,6 +23,7 @@ buses/default_bus_layout="uid://cgs0x7jkqk22e"
 
 GameState="*uid://c3ian5qs5r60"
 UiAudio="*uid://bo2s0rpy3hlxk"
+Transition="*uid://cpobhgtjtyanx"
 
 [display]
 
@@ -32,6 +33,16 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
+
+[file_customization]
+
+folder_colors={
+"res://Audio/": "green",
+"res://Font/": "red",
+"res://Image/": "purple",
+"res://Scenes/": "yellow",
+"res://Script/": "pink"
+}
 
 [physics]
 
