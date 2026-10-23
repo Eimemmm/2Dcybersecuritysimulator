@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7p7jae6ii2vq"
-path="res://.godot/imported/AudioDisable.png-609bd90359c6716ba2366366db44a348.ctex"
+uid="uid://cqitu310dpwhm"
+path="res://.godot/imported/AudioHover.png-0a3ff81991e2800af48148f411016768.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/AudioDisable.png"
-dest_files=["res://.godot/imported/AudioDisable.png-609bd90359c6716ba2366366db44a348.ctex"]
+source_file="res://Image/MainMenu/AudioHover.png"
+dest_files=["res://.godot/imported/AudioHover.png-0a3ff81991e2800af48148f411016768.ctex"]
 
 [params]
 

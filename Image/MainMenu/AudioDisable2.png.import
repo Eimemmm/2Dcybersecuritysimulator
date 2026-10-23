@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhu1t8crj411f"
-path="res://.godot/imported/BG Game Test.jpg-0c9d7e45202f43e562a871bd13f987c8.ctex"
+uid="uid://cwea4xm2pkrf"
+path="res://.godot/imported/AudioDisable2.png-e54367c682fa39daf7a70b82f3f65f99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/BG Game Test.jpg"
-dest_files=["res://.godot/imported/BG Game Test.jpg-0c9d7e45202f43e562a871bd13f987c8.ctex"]
+source_file="res://Image/MainMenu/AudioDisable2.png"
+dest_files=["res://.godot/imported/AudioDisable2.png-e54367c682fa39daf7a70b82f3f65f99.ctex"]
 
 [params]
 

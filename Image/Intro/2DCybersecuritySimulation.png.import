@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwea4xm2pkrf"
-path="res://.godot/imported/AudioDisable2.png-9459a381cd02d17b03fcc4ea0211a80e.ctex"
+uid="uid://brchyo0rncu3k"
+path="res://.godot/imported/2DCybersecuritySimulation.png-c34997ab32af0d5b585ef20147dc606e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Image/AudioDisable2.png"
-dest_files=["res://.godot/imported/AudioDisable2.png-9459a381cd02d17b03fcc4ea0211a80e.ctex"]
+source_file="res://Image/Intro/2DCybersecuritySimulation.png"
+dest_files=["res://.godot/imported/2DCybersecuritySimulation.png-c34997ab32af0d5b585ef20147dc606e.ctex"]
 
 [params]
 

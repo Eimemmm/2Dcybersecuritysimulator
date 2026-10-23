@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://mp6qetv4piuy"]
+
+[ext_resource type="Texture2D" uid="uid://brchyo0rncu3k" path="res://Image/Intro/2DCybersecuritySimulation.png" id="1_rrrc0"]
+[ext_resource type="Script" uid="uid://d0v0sbn24kqdr" path="res://Scenes/intro.gd" id="1_u3s32"]
+[ext_resource type="Texture2D" uid="uid://dpa3ksbkl2em4" path="res://Image/Intro/2DCybersecuritySimulation (1).png" id="2_d0kpp"]
+[ext_resource type="FontFile" uid="uid://dd0ykhn4ey5pg" path="res://Font/pixellet.ttf" id="2_vmpge"]
+[ext_resource type="Texture2D" uid="uid://boomiadpuhlya" path="res://Image/Intro/2DCybersecuritySimulation (2).png" id="3_u3s32"]
+[ext_resource type="AudioStream" uid="uid://8ygg4rn1s4y" path="res://Audio/Typing.mp3" id="5_u3s32"]
+
+[node name="Intro" type="Control" unique_id=1236426171]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u3s32")
+
+[node name="Typesound" type="AudioStreamPlayer2D" parent="." unique_id=243793973]
+stream = ExtResource("5_u3s32")
+bus = &"SFX"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=937045190]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=1282549730]
+clip_children = 1
+layout_mode = 1
+offset_left = 9.0
+offset_top = 20.0
+offset_right = 640.0
+offset_bottom = 220.0
+
+[node name="ImageHolder" type="Control" parent="ColorRect/HBoxContainer" unique_id=103292970]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/HBoxContainer/ImageHolder" unique_id=920498749]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 0
+offset_left = 14.0
+offset_top = -2.0
+offset_right = 214.0
+offset_bottom = 201.0
+texture = ExtResource("1_rrrc0")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect/HBoxContainer/ImageHolder" unique_id=367429961]
+layout_mode = 0
+offset_left = 214.0
+offset_top = -2.0
+offset_right = 427.0
+offset_bottom = 200.0
+texture = ExtResource("2_d0kpp")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="ColorRect/HBoxContainer/ImageHolder" unique_id=974623771]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 0
+offset_left = 410.0
+offset_right = 633.0
+offset_bottom = 200.0
+texture = ExtResource("3_u3s32")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=1828311552]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 237.0
+offset_right = 647.0
+offset_bottom = 354.0
+theme_override_fonts/normal_font = ExtResource("2_vmpge")
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "คุณเรียนจบมหาวิทยาลัยแล้ว และพึ่งจบการฝึกงาน...
+ตอนนี้คุณกำลังหางานบนเว็บสมัครงาน และครุ่นคิดอยู่นานว่าจะสมัครบริษัทไหน ตำแหน่งอะไร
+งานสายไซเบอร์มีหลายตำแหน่ง ทั้ง SOC Analyst, Pentester, Cyber Engineer และอื่น ๆ อีกมากมาย 
+แต่สุดท้ายคุณก็เลือกสมัคร SOC Analyst ที่ Pok Pok Co."

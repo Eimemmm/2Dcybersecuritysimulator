@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://dhfn2svrrl5mm"]
 
 [ext_resource type="Script" uid="uid://c3hjr8l8feyep" path="res://Script/main_menu.gd" id="1_8dude"]
-[ext_resource type="Texture2D" uid="uid://bhu1t8crj411f" path="res://Image/BG Game Test.jpg" id="2_jw6is"]
+[ext_resource type="Texture2D" uid="uid://bhu1t8crj411f" path="res://Image/MainMenu/BG Game Test.jpg" id="2_jw6is"]
 [ext_resource type="Script" uid="uid://34tyhpms5mj3" path="res://Script/matrix_rain.gd" id="3_e08eu"]
 [ext_resource type="FontFile" uid="uid://cbaq7ehjrmll1" path="res://Font/PressStart2P.ttf" id="4_1p460"]
-[ext_resource type="Texture2D" uid="uid://db558mlkm45hi" path="res://Image/AudioEnable.png" id="5_7t75r"]
-[ext_resource type="Texture2D" uid="uid://cwea4xm2pkrf" path="res://Image/AudioDisable2.png" id="6_juqyf"]
-[ext_resource type="Texture2D" uid="uid://cqitu310dpwhm" path="res://Image/AudioHover.png" id="7_iyirb"]
+[ext_resource type="Texture2D" uid="uid://db558mlkm45hi" path="res://Image/MainMenu/AudioEnable.png" id="5_7t75r"]
+[ext_resource type="Texture2D" uid="uid://cwea4xm2pkrf" path="res://Image/MainMenu/AudioDisable2.png" id="6_juqyf"]
+[ext_resource type="Texture2D" uid="uid://cqitu310dpwhm" path="res://Image/MainMenu/AudioHover.png" id="7_iyirb"]
 [ext_resource type="Script" uid="uid://ce048cls1iypv" path="res://Script/mute.gd" id="8_13u8l"]
 [ext_resource type="AudioStream" uid="uid://bcsdp2ryl2u0x" path="res://Audio/BGM.mp3" id="9_vsvm7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3mro0"]
-bg_color = Color(1, 0, 0.5019608, 0.48235294)
+bg_color = Color(0.82915056, 0.3199059, 0.8006329, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
