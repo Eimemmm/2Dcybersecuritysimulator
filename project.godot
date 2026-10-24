@@ -13,7 +13,7 @@ config_version=5
 config/name="2D Cybersecurity Simulation"
 run/main_scene="uid://dhfn2svrrl5mm"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://Image/icon.svg"
+config/icon="res://Image/MainMenu/icon.svg"
 
 [audio]
 

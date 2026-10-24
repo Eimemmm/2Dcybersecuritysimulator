@@ -1,7 +1,8 @@
 extends Control
 
+
 @export_file("*.json") var questions_path := "res://Data/questions.json"
-@export_file("*.tscn") var next_scene_path := ""
+@export_file("*.tscn") var next_scene_path := "res://Scenes/pre_test_success.tscn"
 @export var is_post_test := false
 
 @onready var header: Label = %Header
@@ -46,7 +47,7 @@ func _show_question() -> void:
 
 	selected = -1
 	next_button.visible = false
-	next_button.text = "ส่งใบสมัคร" if index == questions.size() - 1 else "ถัดไป"
+	next_button.text = "ส่งใบสมัคร" if index == questions.size() - 1 else "Next"
 
 
 func _on_choice(i: int) -> void:
@@ -55,6 +56,8 @@ func _on_choice(i: int) -> void:
 
 
 func _on_next() -> void:
+	if index >= questions.size():
+		return
 	var q: Dictionary = questions[index]
 	var correct_text: String = q["choices"][int(q["answer"])]
 	results.append({"stage": q["stage"], "correct": shuffled[selected] == correct_text})
@@ -66,6 +69,7 @@ func _on_next() -> void:
 
 
 func _finish() -> void:
+	next_button.disabled = true
 	var scores := {}
 	for r in results:
 		scores[r["stage"]] = scores.get(r["stage"], 0) + (1 if r["correct"] else 0)
@@ -74,4 +78,4 @@ func _finish() -> void:
 	else:
 		GameState.pretest_scores = scores
 	if next_scene_path != "":
-		get_tree().change_scene_to_file(next_scene_path)
+		Transition.change_scene(next_scene_path)

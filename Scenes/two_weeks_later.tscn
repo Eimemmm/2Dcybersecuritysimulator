@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://c60qr3of1a1d6"]
+
+[ext_resource type="Script" uid="uid://b8lhaa3t3pr8x" path="res://Script/two_weeks_later.gd" id="1_kolwt"]
+[ext_resource type="Texture2D" uid="uid://ccnd0eso7iuuw" path="res://Image/TwoWeeksLater/Wakeup.png" id="1_uds2o"]
+[ext_resource type="Texture2D" uid="uid://cnem2bkjn2dep" path="res://Image/TwoWeeksLater/Notification.png" id="2_kolwt"]
+[ext_resource type="Texture2D" uid="uid://dpbdfuno6g2t1" path="res://Image/TwoWeeksLater/TestSend (1).png" id="3_t401i"]
+[ext_resource type="FontFile" uid="uid://dd0ykhn4ey5pg" path="res://Font/pixellet.ttf" id="5_gcn26"]
+[ext_resource type="Texture2D" uid="uid://p4knft2l4osj" path="res://Image/TwoWeeksLater/Yeah!.png" id="7_khox8"]
+[ext_resource type="AudioStream" uid="uid://8ygg4rn1s4y" path="res://Audio/Typing.mp3" id="7_t401i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
+bg_color = Color(0.101960786, 0.05882353, 0.18039216, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 1, 0.8, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4v7s"]
+bg_color = Color(0.101960786, 0.05882353, 0.18039216, 0.92156863)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 1, 0.8, 1)
+
+[node name="TwoWeeksLater" type="Control" unique_id=1019858106]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kolwt")
+
+[node name="Typesound" type="AudioStreamPlayer" parent="." unique_id=395252910]
+stream = ExtResource("7_t401i")
+bus = &"SFX"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=311532539]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=2069058612]
+clip_children = 1
+layout_mode = 1
+offset_left = 9.0
+offset_top = 20.0
+offset_right = 640.0
+offset_bottom = 220.0
+theme_override_constants/separation = 20
+
+[node name="ImageHolder" type="Control" parent="ColorRect/HBoxContainer" unique_id=473746518]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/HBoxContainer/ImageHolder" unique_id=1338700265]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 202.0
+offset_bottom = 200.0
+texture = ExtResource("1_uds2o")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect/HBoxContainer/ImageHolder" unique_id=1125918964]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 0
+offset_left = 217.0
+offset_right = 403.0
+offset_bottom = 202.0
+texture = ExtResource("2_kolwt")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="ColorRect/HBoxContainer/ImageHolder" unique_id=1943210824]
+light_mask = 2
+visibility_layer = 2
+custom_minimum_size = Vector2(120, 180)
+layout_mode = 0
+offset_left = 426.0
+offset_top = -1.0
+offset_right = 611.0
+offset_bottom = 205.0
+texture = ExtResource("3_t401i")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=1504646383]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 237.0
+offset_right = 627.0
+offset_bottom = 349.0
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("5_gcn26")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+
+[node name="ContinueLabel" type="RichTextLabel" parent="ColorRect/RichTextLabel" unique_id=514695495]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 95.0
+offset_right = 623.0
+offset_bottom = 113.0
+theme_override_fonts/normal_font = ExtResource("5_gcn26")
+theme_override_font_sizes/normal_font_size = 10
+text = "space to continue..."
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1042837613]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_gcn26")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Celebration" type="Control" parent="." unique_id=1152431764]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Illustration" type="TextureRect" parent="Celebration" unique_id=1309958277]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_khox8")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Bottom" type="VBoxContainer" parent="Celebration" unique_id=243707436]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="SpeakerTag" type="PanelContainer" parent="Celebration/Bottom" unique_id=1616988169]
+custom_minimum_size = Vector2(150, 45)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yf5fn")
+
+[node name="MarginContainer" type="MarginContainer" parent="Celebration/Bottom/SpeakerTag" unique_id=608865211]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="SpeakerLabel" type="Label" parent="Celebration/Bottom/SpeakerTag/MarginContainer" unique_id=371688426]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_gcn26")
+theme_override_font_sizes/font_size = 20
+text = "Pok Pok CO. HR"
+
+[node name="DialogBox" type="PanelContainer" parent="Celebration/Bottom" unique_id=195331487]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g4v7s")
+
+[node name="MarginContainer" type="MarginContainer" parent="Celebration/Bottom/DialogBox" unique_id=1149757834]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="TextLabel" type="RichTextLabel" parent="Celebration/Bottom/DialogBox/MarginContainer" unique_id=1256978131]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("5_gcn26")
+theme_override_font_sizes/normal_font_size = 18
+
+[node name="ContinueLabel" type="Label" parent="Celebration" unique_id=1328773609]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -133.0
+offset_top = -24.0
+offset_right = -12.0
+offset_bottom = -6.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_gcn26")
+theme_override_font_sizes/font_size = 10
+text = "Space To Continue..."

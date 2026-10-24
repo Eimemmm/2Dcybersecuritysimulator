@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://boomiadpuhlya" path="res://Image/Intro/2DCybersecuritySimulation (2).png" id="3_u3s32"]
 [ext_resource type="AudioStream" uid="uid://8ygg4rn1s4y" path="res://Audio/Typing.mp3" id="5_u3s32"]
 [ext_resource type="FontFile" uid="uid://bwh3nd3iuccg3" path="res://Font/TA 8 bit.ttf" id="6_ina6a"]
-[ext_resource type="FontFile" uid="uid://cbaq7ehjrmll1" path="res://Font/PressStart2P.ttf" id="7_tay7t"]
+[ext_resource type="FontFile" uid="uid://dd0ykhn4ey5pg" path="res://Font/pixellet.ttf" id="7_tay7t"]
 
 [sub_resource type="Animation" id="Animation_jw2oo"]
 length = 0.001
@@ -128,10 +128,10 @@ text = "คุณเรียนจบมหาวิทยาลัยแล้
 [node name="ContinueLabel" type="RichTextLabel" parent="ColorRect/RichTextLabel" unique_id=604323484]
 visible = false
 layout_mode = 0
-offset_left = 416.0
-offset_top = 106.0
-offset_right = 619.0
-offset_bottom = 129.0
+offset_left = 511.0
+offset_top = 101.0
+offset_right = 641.0
+offset_bottom = 124.0
 theme_override_fonts/normal_font = ExtResource("7_tay7t")
 theme_override_font_sizes/normal_font_size = 10
 text = "space to continue..."

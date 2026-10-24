@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bt6o85gusrwdw"]
+
+[ext_resource type="Script" uid="uid://cjydlfh7gq73w" path="res://Script/pre_test_success.gd" id="1_gui10"]
+[ext_resource type="Texture2D" uid="uid://dg5mleqk75jdy" path="res://Image/Pre_Test/TestSend.png" id="1_msos7"]
+[ext_resource type="FontFile" uid="uid://dd0ykhn4ey5pg" path="res://Font/pixellet.ttf" id="3_wdu10"]
+
+[sub_resource type="Animation" id="Animation_wdu10"]
+resource_name = "Blink"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HintLabel:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.6627451, 0.60784316, 0.8784314, 1), Color(0.6627451, 0.60784316, 0.8784314, 0), Color(0.6627451, 0.60784316, 0.8784314, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_7fci3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HintLabel:theme_override_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.6627451, 0.60784316, 0.8784314, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uwrd0"]
+_data = {
+&"Blink": SubResource("Animation_wdu10"),
+&"RESET": SubResource("Animation_7fci3")
+}
+
+[node name="pre_test_success" type="Control" unique_id=309605165]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gui10")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1823999772]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_msos7")
+expand_mode = 1
+
+[node name="PowerButton" type="TextureButton" parent="." unique_id=2127654199]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 338.0
+offset_right = 23.0
+offset_bottom = 360.0
+
+[node name="HintLabel" type="Label" parent="." unique_id=1088825496]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -43.0
+offset_right = 63.0
+offset_bottom = -26.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.6627451, 0.60784316, 0.8784314, 1)
+theme_override_fonts/font = ExtResource("3_wdu10")
+theme_override_font_sizes/font_size = 10
+text = "ปิดเครื่องไปผักผ่อน...."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1296235422]
+libraries/ = SubResource("AnimationLibrary_uwrd0")

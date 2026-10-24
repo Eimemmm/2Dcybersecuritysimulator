@@ -30,7 +30,7 @@ func _build_text() -> String:
 		var now := Time.get_datetime_dict_from_system()
 		hour = now["hour"]
 		minute = now["minute"]
-		date_str = "%d/%d/%d" % [now["day"], now["month"], now["year"]]
+		date_str = "%d / %d / %d" % [now["day"], now["month"], now["year"]]
 	else:
 		var total := int(_fake_seconds) % 86400
 		hour = floori(total / 3600.0)

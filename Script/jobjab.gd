@@ -6,7 +6,6 @@ extends Control
 func _ready() -> void:
 	for b in [Do_Test_button]:
 		b.pressed.connect(UiAudio.play_click)
-	Do_Test_button.pressed.connect(_on_start_test_pressed)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
