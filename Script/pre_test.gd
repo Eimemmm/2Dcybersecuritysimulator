@@ -23,9 +23,10 @@ func _ready() -> void:
 	questions = JSON.parse_string(file.get_as_text())
 	for i in choice_buttons.size():
 		choice_buttons[i].pressed.connect(_on_choice.bind(i))
+		choice_buttons[i].pressed.connect(UiAudio.play_click)
 	next_button.pressed.connect(_on_next)
+	next_button.pressed.connect(UiAudio.play_click)
 	_show_question()
-
 
 func _show_question() -> void:
 	var q: Dictionary = questions[index]

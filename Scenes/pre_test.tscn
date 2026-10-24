@@ -1,36 +1,65 @@
-[gd_scene format=3 uid="uid://cmfvp4fsulwng"]
+[gd_scene format=3 uid="uid://bcl6oo51wv0v8"]
 
-[ext_resource type="Script" uid="uid://dj8q3y8i0wo63" path="res://Scenes/pre_test.gd" id="1_qg524"]
-[ext_resource type="Texture2D" uid="uid://dxb2exeettvr8" path="res://Image/Pre_Test/PreTestlayout.png" id="2_0af0e"]
+[ext_resource type="Script" uid="uid://dj8q3y8i0wo63" path="res://Script/pre_test.gd" id="1_qg524"]
+[ext_resource type="FontFile" uid="uid://bwh3nd3iuccg3" path="res://Font/TA 8 bit.ttf" id="2_7wm38"]
+[ext_resource type="Texture2D" uid="uid://ccovo5badwheu" path="res://Image/Pre_Test/Assenment.png" id="2_q5cry"]
+[ext_resource type="Script" uid="uid://c63ec0ikhlutp" path="res://Script/clock.gd" id="3_1neno"]
+[ext_resource type="Texture2D" uid="uid://db558mlkm45hi" path="res://Image/MainMenu/AudioEnable.png" id="4_q5cry"]
 
-[sub_resource type="SystemFont" id="SystemFont_s1fef"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2a4em"]
+content_margin_left = 7.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.14117648, 0.105882354, 0.27058825, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35686275, 0.16862746, 0.72156864, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qg524"]
 content_margin_left = 5.0
 content_margin_top = 5.0
 content_margin_right = 5.0
 content_margin_bottom = 5.0
-bg_color = Color(1, 0, 0.5019608, 1)
+bg_color = Color(0.14117648, 0.105882354, 0.27058825, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(0.53531086, 0.01213973, 0.88947886, 1)
+border_color = Color(0.35686275, 0.16862746, 0.72156864, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0af0e"]
-bg_color = Color(2.0696223e-06, 0.72367585, 0.2532551, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.035935163, 0.5581201, 5.7756904e-07, 1)
+bg_color = Color(0.35686275, 0.16862746, 0.72156864, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.13333334, 0.9019608, 0.7647059, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sde50"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_r434p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n0h76"]
-bg_color = Color(0.38847992, 0.62974435, 0.99022466, 1)
+bg_color = Color(1, 0, 0.5019608, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -42,7 +71,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85vi7"]
-bg_color = Color(0.59112996, 0.7541309, 0.9962819, 1)
+bg_color = Color(1, 0.43640083, 0.6176851, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -56,6 +85,7 @@ corner_radius_bottom_left = 4
 [node name="Pre_Test" type="Control" unique_id=852436706]
 custom_minimum_size = Vector2(640, 360)
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -70,7 +100,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_0af0e")
+texture = ExtResource("2_q5cry")
 expand_mode = 1
 
 [node name="Header" type="Label" parent="." unique_id=1228950595]
@@ -79,11 +109,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -173.5
-offset_top = 26.0
-offset_right = 173.5
-offset_bottom = 60.0
+offset_left = -158.25
+offset_top = 27.0
+offset_right = 158.25
+offset_bottom = 61.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_7wm38")
 theme_override_font_sizes/font_size = 24
 text = "Application Assessment (1/12)"
 
@@ -94,9 +125,10 @@ offset_left = 7.0
 offset_top = 69.0
 offset_right = 627.0
 offset_bottom = 161.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = SubResource("SystemFont_s1fef")
-theme_override_font_sizes/normal_font_size = 22
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_7wm38")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2a4em")
 
 [node name="ExhibitPanel" type="PanelContainer" parent="." unique_id=1462554521]
 unique_name_in_owner = true
@@ -123,24 +155,26 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -321.0
-offset_top = -192.0
-offset_right = 320.0
-offset_bottom = -22.0
+offset_left = -287.0
+offset_top = -177.0
+offset_right = 288.0
+offset_bottom = -33.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 0
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 16
 columns = 2
 
 [node name="ChoiceA" type="Button" parent="Choices" unique_id=2102942316]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 50)
+custom_minimum_size = Vector2(150, 60)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 14
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_7wm38")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_qg524")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0af0e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sde50")
@@ -150,12 +184,14 @@ autowrap_mode = 3
 
 [node name="ChoiceB" type="Button" parent="Choices" unique_id=301397733]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 50)
+custom_minimum_size = Vector2(150, 60)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 14
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_7wm38")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_qg524")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0af0e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sde50")
@@ -165,12 +201,14 @@ autowrap_mode = 3
 
 [node name="ChoiceC" type="Button" parent="Choices" unique_id=1127359248]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 50)
+custom_minimum_size = Vector2(150, 60)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 14
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_7wm38")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_qg524")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0af0e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sde50")
@@ -180,12 +218,14 @@ autowrap_mode = 3
 
 [node name="ChoiceD" type="Button" parent="Choices" unique_id=944780141]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 50)
+custom_minimum_size = Vector2(150, 60)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 14
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_7wm38")
+theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_qg524")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0af0e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sde50")
@@ -196,10 +236,25 @@ autowrap_mode = 3
 [node name="NextButton" type="Button" parent="." unique_id=2101093111]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 584.0
-offset_top = 307.0
-offset_right = 633.0
-offset_bottom = 334.0
+offset_left = 536.0
+offset_top = 30.0
+offset_right = 627.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_n0h76")
 theme_override_styles/hover = SubResource("StyleBoxFlat_85vi7")
+
+[node name="Label" type="Label" parent="." unique_id=1165403981]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 339.0
+offset_right = 637.0
+offset_bottom = 362.0
+theme_override_font_sizes/font_size = 6
+horizontal_alignment = 2
+script = ExtResource("3_1neno")
+
+[node name="AudioEnable" type="Sprite2D" parent="." unique_id=519671347]
+position = Vector2(587, 350)
+texture = ExtResource("4_q5cry")
